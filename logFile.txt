@@ -878,3 +878,73 @@ File table:
 
 Output stack:
 
+#################################
+Execution stack:
+Bool a; Int v; a = false; If a Then v = 2 else v = 3; Print(v)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+#################################
+Execution stack:
+Bool a
+Int v; a = false; If a Then v = 2 else v = 3; Print(v); 
+
+Symbols symtable:
+Bool a: Not declared
+
+File table:
+
+Output stack:
+
+#################################
+Execution stack:
+Int v
+Bool a
+a = false; If a Then v = 2 else v = 3; Print(v); 
+
+Symbols symtable:
+Bool a: Not declared
+Int v: Not declared
+
+File table:
+
+Output stack:
+
+#################################
+Execution stack:
+a = false
+Int v
+Bool a
+If a Then v = 2 else v = 3; Print(v); 
+
+Symbols symtable:
+Bool a: false
+Int v: Not declared
+
+File table:
+
+Output stack:
+
+#################################
+Execution stack:
+Print(v)
+If a Then v = 2 else v = 3
+v = 3
+a = false
+Int v
+Bool a
+
+
+Symbols symtable:
+Bool a: false
+Int v: 3
+
+File table:
+
+Output stack:
+3
+
