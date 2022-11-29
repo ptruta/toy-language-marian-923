@@ -1,0 +1,880 @@
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+a = 2 + 3 * 5
+Int b
+Int a
+b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: 5
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(b)
+b = a + 1
+a = 2 + 3 * 5
+Int b
+Int a
+
+
+Symbols symtable:
+Int a: 5
+Int b: 6
+
+File table:
+
+Output stack:
+6
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+a = 2 + 3 * 5
+Int b
+Int a
+b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: 2
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(b)
+b = a + 1
+a = 2 + 3 * 5
+Int b
+Int a
+
+
+Symbols symtable:
+Int a: 2
+Int b: 2
+
+File table:
+
+Output stack:
+2
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+a = 2 + 3 * 5
+Int b
+Int a
+b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: 10
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(b)
+b = a + 1
+a = 2 + 3 * 5
+Int b
+Int a
+
+
+Symbols symtable:
+Int a: 10
+Int b: 11
+
+File table:
+
+Output stack:
+11
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+a = 2 + 3 * 5
+Int b
+Int a
+b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: 30
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(b)
+b = a + 1
+a = 2 + 3 * 5
+Int b
+Int a
+
+
+Symbols symtable:
+Int a: 30
+Int b: 31
+
+File table:
+
+Output stack:
+31
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+a = 2 + 3 * 5
+Int b
+Int a
+b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: 30
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(b)
+b = a + 1
+a = 2 + 3 * 5
+Int b
+Int a
+
+
+Symbols symtable:
+Int a: 30
+Int b: 31
+
+File table:
+
+Output stack:
+31
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+a = 2 + 3 * 5
+Int b
+Int a
+b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: 30
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a; Int b; a = 2 + 3 * 5; b = a + 1; Print(b)
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int a
+Int b; a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Int b
+Int a
+a = 2 + 3 * 5; b = a + 1; Print(b); 
+
+Symbols symtable:
+Int a: Not declared
+Int b: Not declared
+
+File table:
+
+Output stack:
+
