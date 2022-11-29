@@ -1,5 +1,6 @@
 package view;
 
+import controller.evaluation.EvalUtil;
 import controller.exestack.ExeStack;
 import controller.exestack.MyDeque;
 import controller.progstate.ProgramState;
@@ -9,7 +10,10 @@ import exceptions.FileException;
 import exceptions.StmtException;
 import exceptions.SymbolException;
 import exceptions.TypeException;
+import model.statements.AssignStmt;
 import model.statements.IStmt;
+import model.statements.IfStmt;
+import model.statements.PrintStmt;
 import model.symbol.ISymbol;
 
 public class View implements IView {
@@ -68,6 +72,12 @@ public class View implements IView {
                     this.progState.logProgramStateExec();
                     System.exit(0);
                 }
+//                else {
+//                    String[] ifStmtOutput = last.getContents().split(";");
+//                    String output1 = ifStmtOutput[ifStmtOutput.length - 1];
+//
+//                   EvalUtil.conditionalHelper(,output1,last,this.progState.getStack(),this.progState.get)
+//                }
                 // Assign case
                 this.progState.nextIsAssign();
                 last = this.progState.getStack().getLast();

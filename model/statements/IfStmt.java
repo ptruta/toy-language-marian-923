@@ -41,12 +41,13 @@ public class IfStmt implements IStmt {
                 j++;
                 break;
             }
-            if (exp[j + 1].startsWith("else")) {
+            if (exp[j + 1].startsWith("Else")) {
                 secondExp += exp[j];
                 break;
             }
             secondExp += exp[j] + " ";
         }
+        secondExp += exp[j] + " ";
         i = j++;
         if (i == exp.length - 1) {
             String[] finalExp = new String[4];
@@ -58,13 +59,13 @@ public class IfStmt implements IStmt {
         }
         // Computing the third one, if it exists
         i++;
-        String thirdExp = "";
+        String thirdExp = exp[i + 1] + " ";
         for (int k = i + 1; k < exp.length - 1; k++) {
-            thirdExp += exp[k] + " ";
-            thirdExp += exp[k + 1].split(";")[0];
+            thirdExp += exp[k + 1].split(";")[0] + " ";
         }
-
-        thirdExp = thirdExp.replace("==","=");
+        if (thirdExp.split(" ").length == 1) {
+            thirdExp = thirdExp.split(" ")[0];
+        }
 
         String[] finalExp = new String[6];
         finalExp[0] = "If";

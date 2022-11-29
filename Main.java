@@ -10,7 +10,7 @@ public class Main {
         // bol = true; Print(bol); Print(\"Condition not met\"); If c > b Then
         // Print(\"In fiecare zi vad garda\") Else b = 1;";
 //        String program = "Int a; Int b; a = 10 - 5 * 7 * 4; b = a + a + 1; Print(b)";
-        String program = "Bool a; Int v; a = false; If a Then v = 2 else v = 3; Print(v)";
+        String program = "Bool a; Int v; a = true; If a Then v = 3 + 4 * 7; else v = 2; Print(v)";
         View view = new View(program);
 //        View view1 = new View(program1);
         view.execute();

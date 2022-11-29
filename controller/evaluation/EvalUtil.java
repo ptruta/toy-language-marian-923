@@ -238,6 +238,7 @@ public class EvalUtil {
                     int i = 3;
                     Integer rez = 0;
                     if (i < exp.length - 1) {
+                        boolean added = false;
                         while (i < exp.length - 1) {
                             if (exp[i].startsWith("*") || exp[i].startsWith("/")) {
                                 Integer next = getNextInteger(table, exp, i);
@@ -278,21 +279,24 @@ public class EvalUtil {
 
                                 i += 2;
                             }
+                            added = true;
                         }
                         i = 3;
-                        if (i < exp.length && Objects.equals(exp[i], "else")) {
-                            while (i < exp.length - 1 && Objects.equals(exp[i], "else")) {
-                                Integer next = EvalUtil.convNumeric(exp[2]);
-                                if (next == null) {
-                                    next = ((SymInteger) EvalUtil.lookUp(table, exp[2])).getValue();
+                        if (i < exp.length && !added) {
+                            while (i < exp.length - 1) {
+                                Integer next = getNextInteger(table, exp, i);
+
+                                if (i + 1 <= exp.length) {
+                                    exp[i + 1] = String.valueOf(next);
+                                    rez = next;
+                                } else {
+                                    rez += next;
                                 }
-                                rez = next;
 
                                 i += 2;
                             }
                         }
-                    }
-                    else {
+                    } else {
                         Integer next = EvalUtil.convNumeric(exp[2]);
                         if (next == null) {
                             next = ((SymInteger) EvalUtil.lookUp(table, exp[2])).getValue();
@@ -468,7 +472,21 @@ public class EvalUtil {
                 stack.addFirst(checkAssign);
         }
         if (exp.length == 4) {
-            return (IfStmt) conditional;
+            // Now we do the else branch
+            AssignStmt checkAssign = new AssignStmt(exp[3]);
+            checkAssign = EvalUtil.processAssign(table, checkAssign);
+            if (checkAssign == null) { // If it's not one, the it's the other
+                PrintStmt checkPrint = new PrintStmt(exp[3]);
+                checkPrint = EvalUtil.processPrint(output, table, checkPrint);
+                if (checkPrint == null) {
+                    throw new StmtException("Instruction cannot be done");
+                }
+                stack.addFirst(checkPrint);
+                return (IfStmt) conditional;
+            } else {
+                stack.addFirst(checkAssign);
+                return (IfStmt) conditional;
+            }
         } else {
             // Now we do the else branch
             AssignStmt checkAssign = new AssignStmt(exp[5]);
