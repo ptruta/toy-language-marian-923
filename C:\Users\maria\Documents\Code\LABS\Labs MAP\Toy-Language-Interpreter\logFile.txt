@@ -1,0 +1,2799 @@
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+String exp; exp = "test1.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test1.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test1.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test1.in
+
+File table:
+test1.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test1.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test1.in
+
+File table:
+test1.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test1.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test1.in
+
+File table:
+test1.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test1.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test1.in
+
+File table:
+test1.in: true
+
+Output stack:
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+File table:
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+File table:
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+File table:
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+File table:
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+
+File table:
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 5
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
+Execution stack:
+String exp; exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+
+Symbols symtable:
+
+File table:
+
+Output stack:
+
+Execution stack:
+String exp
+exp = "test.in"; openRFile(exp); Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: 
+
+File table:
+
+Output stack:
+
+Execution stack:
+openRFile(exp)
+exp = "test.in"
+String exp
+Int b; b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 2 + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: Not declared
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 5
+Int c: 2
+String exp: test.in
+
+File table:
+test.in: true
+
+Output stack:
+
+Execution stack:
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Bool bol; bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 10
+String exp: test.in
+
+File table:
+
+Output stack:
+
+Execution stack:
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+bol = true; Print(bol); Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 10
+String exp: test.in
+Bool bol: Not declared
+
+File table:
+
+Output stack:
+
+Execution stack:
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+Print("Condition not met"); If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 10
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+true
+
+Execution stack:
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;; 
+
+Symbols symtable:
+Int b: 3
+Int c: 10
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+Condition not met
+true
+
+Execution stack:
+If c > b Then Print("In fiecare zi vad garda") Else b = 1;
+b = 1
+Print("In fiecare zi vad garda")
+Print("Condition not met")
+Print(bol)
+bol = true
+Bool bol
+closeRFile(exp)
+readFile(exp, c)
+b = 3 * c
+c = 2
+Int c
+b = 2 + 3
+Int b
+openRFile(exp)
+exp = "test.in"
+String exp
+
+
+Symbols symtable:
+Int b: 1
+Int c: 10
+String exp: test.in
+Bool bol: true
+
+File table:
+
+Output stack:
+In fiecare zi vad garda
+Condition not met
+true
+
