@@ -9,8 +9,8 @@ public class Main {
         // + 3; Int c; c = 2; b = 3 * c; readFile(exp, c); closeRFile(exp); Bool bol;
         // bol = true; Print(bol); Print(\"Condition not met\"); If c > b Then
         // Print(\"In fiecare zi vad garda\") Else b = 1;";
-        String program = "Int a; Int b; a = 10 - 5 * 7 * 4; b = a + a + 1; Print(b)";
-//        String program1 = "IF(a) THEN(v = 2) ELSE (v = 3) then a = true; int v; bool a;";
+//        String program = "Int a; Int b; a = 10 - 5 * 7 * 4; b = a + a + 1; Print(b)";
+        String program = "Bool a; Int v; a = false; If a Then v = 2 else v = 3; Print(v)";
         View view = new View(program);
 //        View view1 = new View(program1);
         view.execute();

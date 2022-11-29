@@ -97,7 +97,12 @@ public class EvalUtil {
     }
 
     public static boolean isAssignStmt(IStmt statement) {
-        String tok = ((AssignStmt) statement).getWords()[1];
+        String tok = "";
+        if (((AssignStmt) statement).getWords().length > 1) {
+            tok = ((AssignStmt) statement).getWords()[1];
+        } else {
+            tok = ((AssignStmt) statement).getWords()[0];
+        }
         return tok.startsWith("=");
     }
 
@@ -231,44 +236,68 @@ public class EvalUtil {
                 Integer rez1 = 0;
                 if (EvalUtil.isInt(sym)) { // If our symbol is an integer
                     int i = 3;
-                    while (i < exp.length - 1) {
-                        if (exp[i].startsWith("*") || exp[i].startsWith("/")) {
-                            Integer next = getNextInteger(table, exp, i);
-                            rez1 = next;
-                            int parseInt = i - 1;
-                            exp[i - 1] = String.valueOf(next);
-                            String[] arr_new = new String[exp.length - 1];
-                            for (int count = 0, k = 0; count < exp.length; count++) {
-                                if (count != parseInt + 1) {
-                                    arr_new[k] = exp[count];
-                                    k++;
+                    Integer rez = 0;
+                    if (i < exp.length - 1) {
+                        while (i < exp.length - 1) {
+                            if (exp[i].startsWith("*") || exp[i].startsWith("/")) {
+                                Integer next = getNextInteger(table, exp, i);
+                                rez1 = next;
+                                int parseInt = i - 1;
+                                exp[i - 1] = String.valueOf(next);
+                                String[] arr_new = new String[exp.length - 1];
+                                for (int count = 0, k = 0; count < exp.length; count++) {
+                                    if (count != parseInt + 1) {
+                                        arr_new[k] = exp[count];
+                                        k++;
+                                    }
                                 }
-                            }
-                            String[] arr_new1 = new String[arr_new.length - 1];
-                            for (int count = 0, k = 0; count < arr_new.length; count++) {
-                                if (count != parseInt + 1) {
-                                    arr_new1[k] = arr_new[count];
-                                    k++;
+                                String[] arr_new1 = new String[arr_new.length - 1];
+                                for (int count = 0, k = 0; count < arr_new.length; count++) {
+                                    if (count != parseInt + 1) {
+                                        arr_new1[k] = arr_new[count];
+                                        k++;
+                                    }
                                 }
-                            }
-                            exp = arr_new1;
+                                exp = arr_new1;
 
+                            }
+                            i += 2;
                         }
-                        i += 2;
+                        rez = rez1;
+                        i = 3;
+                        if (i + 3 < exp.length && !Objects.equals(exp[i + 3], "else")) {
+                            while (i < exp.length - 1) {
+                                Integer next = getNextInteger(table, exp, i);
+
+                                if (i + 1 <= exp.length) {
+                                    exp[i + 1] = String.valueOf(next);
+                                    rez = next;
+                                } else {
+                                    rez += next;
+                                }
+
+                                i += 2;
+                            }
+                        }
+                        i = 3;
+                        if (i < exp.length && Objects.equals(exp[i], "else")) {
+                            while (i < exp.length - 1 && Objects.equals(exp[i], "else")) {
+                                Integer next = EvalUtil.convNumeric(exp[2]);
+                                if (next == null) {
+                                    next = ((SymInteger) EvalUtil.lookUp(table, exp[2])).getValue();
+                                }
+                                rez = next;
+
+                                i += 2;
+                            }
+                        }
                     }
-                    int rez = rez1;
-                    i = 3;
-                    while (i < exp.length - 1) {
-                        Integer next = getNextInteger(table, exp, i);
-
-                        if (i + 1 <= exp.length) {
-                            exp[i + 1] = String.valueOf(next);
-                            rez = next;
-                        } else {
-                            rez += next;
+                    else {
+                        Integer next = EvalUtil.convNumeric(exp[2]);
+                        if (next == null) {
+                            next = ((SymInteger) EvalUtil.lookUp(table, exp[2])).getValue();
                         }
-
-                        i += 2;
+                        rez = next;
                     }
                     table.setSymbol(sym.getLabel(), new SymInteger(rez, sym.getLabel()));
                     return (AssignStmt) stmt;
@@ -478,7 +507,7 @@ public class EvalUtil {
                         return EvalUtil.conditionalHelper(cond, exp, conditional, stack, table, output);
                     }
                     if (sym.getType() == "Bool" || b != null) {
-                        Boolean cond = ((SymBoolean) sym).getValue() != false || b != false;
+                        Boolean cond = ((SymBoolean) sym).getValue() || b;
                         return EvalUtil.conditionalHelper(cond, exp, conditional, stack, table, output);
                     }
                 }
